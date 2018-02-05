@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Router>
         <div className = 'scratch'>
-          <Navbar className='fixed-top' inverse expanded staticTop>
+          <Navbar className='fixed-top' inverse staticTop>
             <Navbar.Header>
               <Navbar.Brand>
                 <Link to="/home">Scratch</Link>

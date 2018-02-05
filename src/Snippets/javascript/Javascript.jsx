@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
-import Async from './async/Async';
-import Arrows from './arrows/Arrows';
-import ConstLet from './const-let/ConstLet';
+import Async from './Async';
+import Arrows from './Arrows';
+import ConstLet from './ConstLet';
+import BlockScope from './BlockScope';
 import { Card, ImageHeader, CardBody, CardFooter } from 'react-simple-card';
 
 const Javascript = ({ match }) => {
@@ -11,6 +12,7 @@ const Javascript = ({ match }) => {
             <Route path={`${match.url}/async`} component={Async} />
             <Route path={`${match.url}/arrows`} component={Arrows} />
             <Route path={`${match.url}/const-let`} component={ConstLet} />
+            <Route path={`${match.url}/block-scope`} component={BlockScope} />
             <Route exact path={match.url} render={() => (
                 <div className='row'>
                     <div className='col-md-4'>
@@ -18,16 +20,18 @@ const Javascript = ({ match }) => {
                             <Card>
                                 <ImageHeader imageSrc="../let-const.jpg" />
                                 <CardBody>Const & Let</CardBody>
-                                <CardFooter>From var, to Const & Let</CardFooter>
+                                <CardFooter>Use const, else let: with block scoping</CardFooter>
                             </Card>
                         </Link>
                     </div>
                     <div className='col-md-4'>
-                        <Card>
-                            <ImageHeader imageSrc="http://via.placeholder.com/600x250" />
-                            <CardBody>Block scope</CardBody>
-                            <CardFooter>From IIFE to Blocs</CardFooter>
-                        </Card>
+                        <Link to={`${match.url}/block-scope`}>
+                            <Card>
+                                <ImageHeader imageSrc="http://via.placeholder.com/600x250" />
+                                <CardBody>Block scope</CardBody>
+                                <CardFooter>From IIFE to Blocs</CardFooter>
+                            </Card>
+                        </Link>
                     </div>
                     <div className='col-md-4'>
                         <Card>
