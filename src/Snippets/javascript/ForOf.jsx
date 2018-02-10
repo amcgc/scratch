@@ -6,7 +6,7 @@ const ForOf = () => {
     }
 
     for(const [index, elem] of [1, 2, 3].entries()) {
-        console.log(`destructured entres: ${index}:${elem}`);
+        console.log(`destructured entres : ${index}:${elem}`);
     }
 
     return (
