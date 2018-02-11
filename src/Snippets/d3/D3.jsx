@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
+import FirstBarChart from './FirstBarChart';
 
 const Javascript = ({ match }) => {
     return <div>
@@ -9,6 +10,7 @@ const Javascript = ({ match }) => {
             )} />
             <Redirect to={`${match.url}`} />
         </Switch>
+        <FirstBarChart></FirstBarChart>
     </div>
 }
 

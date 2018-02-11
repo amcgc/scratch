@@ -76,3 +76,9 @@ body {
   }
 }
 
+/** D3 First Bar Chart **/
+.bar {
+  background-color: blue;
+  height: 50px;
+  margin: 10px;
+}
